@@ -1,5 +1,6 @@
 package com.project.qa.testcases;
 
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -13,6 +14,7 @@ public class LoginPageTest extends TestBase {
 	
 	LoginPage loginpage;
 	HomePage homepage;
+	Logger log = Logger.getLogger(LoginPageTest.class);
 	
 	public LoginPageTest() {
 		super(); /*
@@ -30,8 +32,12 @@ public class LoginPageTest extends TestBase {
 	
 	@Test(priority = 1)
 	public void loginPageTitleTest() {
+		log.info("*********************Checking Title of Login Page*********************");
 		String title = loginpage.validateLoginPageTitle();
 		Assert.assertEquals(title,"CRMPRO - CRM software for customer relationship management, sales, and support.");
+		log.warn("Hey this just a warning message");
+		log.fatal("hey this is just fatal error message");
+		log.debug("this is debug message");
 	}
 	
 	@Test(priority = 2)

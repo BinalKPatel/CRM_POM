@@ -29,13 +29,12 @@ public class TestBase {
 			prop = new Properties();
 			FileInputStream ip = new FileInputStream("C:\\Selenium_WorkSpace\\POM_Test\\src\\main\\java\\com\\project\\qa\\config\\config.properties");
 			prop.load(ip);
-		}catch (FileNotFoundException e) {
-			e.printStackTrace();
+		
 		}catch (IOException e) {
-			e.printStackTrace();
+			e.getMessage();
 		}
 		
-	}
+}
 	
 	public static void intialization(){
 		String browserName = prop.getProperty("browser");
