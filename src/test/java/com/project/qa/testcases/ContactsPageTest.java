@@ -54,7 +54,7 @@ public class ContactsPageTest extends TestBase {
 	@Test(priority = 3)
 	public void selectMultipleContactList() {
 		contactsPage.selectContactsByName("annu annu");
-		contactsPage.selectContactsByName("kc kc");
+		contactsPage.selectContactsByName("anu patel");
 	}
 	
 	@DataProvider

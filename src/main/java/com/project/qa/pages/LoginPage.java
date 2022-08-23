@@ -25,7 +25,10 @@ public class LoginPage extends TestBase {
 	WebElement crmLogo;
 	
 	//@FindBy(xpath = "//div[@aria-lable='Dismiss']")
-	@FindBy(xpath = "//div[@class='intercom-19gqqlk e13xul2n4']//span")
+	//@FindBy(xpath = "//div[@class='intercom-19gqqlk e13xul2n4']//span")
+	//WebElement popUp;
+	
+	@FindBy(xpath = "//div[contains(@class,'e13xul2n4')]")
 	WebElement popUp;
 	
 	//Initialize Page Object
